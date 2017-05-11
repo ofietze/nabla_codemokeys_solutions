@@ -1,4 +1,4 @@
-# nabla_codemokey_solutions
+# nabla_codemokeys_solutions
 Sammlung aller Loesungen zu den Codemonkeys-Aufgaben von nable.algo.informatik.tu-darmstadt.de
 ## Rules
   * ein Ordner fuer jede Aufgabenkategorie
