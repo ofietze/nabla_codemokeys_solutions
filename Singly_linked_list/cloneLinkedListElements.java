@@ -1,22 +1,18 @@
-{
-    LinkedList<T> newList = new LinkedList();
+                      {
+    ListElement<T> clone = null, currClone = null;
     
-    ListElement<T> current = list.getFirst();
-    while(current != null) {
-        ListElement<T> newItem = new ListElement();
-        newItem.setData(current.getData());
-        if (newList.getFirst() == null) {
-            newList.setFirst(newItem);
-            newList.setLast(newItem);
-            newList.setSize(1);
+    for (ListElement<T> curr = el; true; curr = curr.next()) {
+        if (clone == null) {
+            clone = new ListElement(curr.getData());
+            currClone = clone;
+        } else {
+            currClone.setNext(new ListElement(curr.getData()));
+            currClone = currClone.next();
         }
-        else {
-            newList.getLast().setNext(newItem);
-            newList.setLast(newItem);
-            newList.setSize(newList.size() +1);
+        if (!curr.hasNext()) {
+            break;
         }
-        current = current.next();
     }
     
-    return newList;
+    return clone;
 }
