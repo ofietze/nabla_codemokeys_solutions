@@ -1,6 +1,5 @@
 {
     LinkedList<T> newList = new LinkedList();
-    
     ListElement<T> current = list.getFirst();
     while(current != null) {
         ListElement<T> newItem = new ListElement();
@@ -17,6 +16,5 @@
         }
         current = current.next();
     }
-    
     return newList;
 }
