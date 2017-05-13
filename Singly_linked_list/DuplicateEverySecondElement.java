@@ -7,6 +7,7 @@
             MListElement<T> tmp = new MListElement(elem.getKey());
             tmp.setNext(elem.getNext());
             elem.setNext(tmp);
+            elem = elem.getNext();
         }
         i++;
         elem = elem.getNext();
